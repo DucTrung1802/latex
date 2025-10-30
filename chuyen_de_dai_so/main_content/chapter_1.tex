@@ -111,25 +111,25 @@ Tiếp tục quy trình đối với khoảng $[a_2,b_2]$.
 \caption{Thuật toán Chia Đôi}
 \label{alg:bisection}
 \begin{algorithmic}[1]
-\REQUIRE $a,b$ sao cho $f(a)f(b) < 0$, sai số $TOL$, số lặp tối đa $N_0$
-\ENSURE nghiệm xấp xỉ $p$ hoặc thông báo thất bại
-\STATE $i \gets 1$
-\STATE $FA \gets f(a)$
-\WHILE {$i \le N_0$}
-    \STATE $p \gets a + \frac{b-a}{2}$
-    \STATE $FP \gets f(p)$
-    \IF {$FP = 0$ or $\frac{b-a}{2} < TOL$}
-        \RETURN $p$
-    \ENDIF
-    \STATE $i \gets i+1$
-    \IF {$FA \cdot FP > 0$}
-        \STATE $a \gets p$
-        \STATE $FA \gets FP$
-    \ELSE
-        \STATE $b \gets p$
-    \ENDIF
-\ENDWHILE
-\RETURN {``Thất bại sau $N_0$ lặp.''}
+\Require $a,b$ sao cho $f(a)f(b) < 0$, sai số $TOL$, số lặp tối đa $N_0$
+\Ensure Nghiệm xấp xỉ $p$
+\State $i \gets 1$
+\State $FA \gets f(a)$
+\While {$i \le N_0$}
+    \State $p \gets a + \frac{b-a}{2}$
+    \State $FP \gets f(p)$
+    \If {$FP = 0$ or $\frac{b-a}{2} < TOL$}
+        \Return $p$
+    \EndIf
+    \State $i \gets i+1$
+    \If {$FA \cdot FP > 0$}
+        \State $a \gets p$
+        \State $FA \gets FP$
+    \Else
+        \State $b \gets p$
+    \EndIf
+\EndWhile
+\Return {``Thất bại sau $N_0$ lặp.''}
 \end{algorithmic}
 \end{algorithm}
 
@@ -475,19 +475,20 @@ hoặc \textbf{functional iteration}.
 \caption{Fixed-Point Iteration}
 \label{alg:fixed_point_iteration}
 \begin{algorithmic}[1]
-\STATE Cho xấp xỉ ban đầu $p_0$; ngưỡng sai số $\text{TOL}$; số lặp tối đa $N_0$.
-\STATE $i \gets 1$.
-\WHILE{$i \le N_0$}
-    \STATE $p \gets g(p_0)$ \hfill \% tính giá trị lặp mới
-    \IF{$|p - p_0| < \text{TOL}$}
-        \RETURN $p$ \hfill \% thuật toán thành công
-    \ENDIF
-    \STATE $i \gets i + 1$
-    \STATE $p_0 \gets p$ \hfill \% cập nhật giá trị lặp
-\ENDWHILE
-\RETURN \texttt{"Thất bại: vượt quá $N_0$ vòng lặp."}
+\State Chọn xấp xỉ ban đầu $p_0$; ngưỡng sai số $\text{TOL}$; số lặp tối đa $N_0$.
+\State $i \gets 1$.
+\While{$i \le N_0$}
+    \State $p \gets g(p_0)$ \hfill \% tính giá trị lặp mới
+    \If{$|p - p_0| < \text{TOL}$}
+        \State \Return $p$ \hfill \% thuật toán thành công
+    \EndIf
+    \State $i \gets i + 1$
+    \State $p_0 \gets p$ \hfill \% cập nhật giá trị lặp
+\EndWhile
+\State \Return \texttt{"Thất bại: vượt quá $N_0$ vòng lặp."}
 \end{algorithmic}
 \end{algorithm}
+
 
 %-------------------------------------------------------------
 \subsubsection*{Ví dụ minh họa}
@@ -740,16 +741,22 @@ Bắt đầu từ giá trị xấp xỉ ban đầu $p_0$, giá trị xấp xỉ 
 \begin{algorithm}[H]
 \caption{Phương pháp Newton}
 \label{alg:newton}
+\begin{algorithm}[!h]
 \SetAlgoLined
 \KwIn{
-    Hàm $f(x)$, đạo hàm $f'(x)$, 
-    giá trị ban đầu $p_0$, 
-    sai số cho phép $\text{TOL}$, 
-    số lần lặp tối đa $N_0$.
+    Hàm $f(x)$, đạo hàm $f'(x)$;\\
+    Giá trị ban đầu $p_0$;\\
+    Sai số cho phép $\mathrm{TOL}$;\\
+    Số lần lặp tối đa $N_0$.
 }
 \KwOut{
     Nghiệm xấp xỉ $p$ hoặc thông báo lỗi nếu phương pháp thất bại.
 }
+\BlankLine
+\caption{Thuật toán Newton–Raphson}
+\label{alg:newton_method}
+\end{algorithm}
+
 
 \BlankLine
 \textbf{Bước 1.} Đặt $i = 1$. \\

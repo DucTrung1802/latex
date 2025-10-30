@@ -1,4 +1,4 @@
-\babel@toc {nil}{}\relax 
+\babel@toc {vietnamese}{}\relax 
 \contentsline {chapter}{\numberline {1}Phương Pháp Giải Phương Trình Một Biến}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Phương pháp Chia Đôi (Bisection Method)}{6}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Kỹ thuật Chia Đôi}{6}{subsection.1.1.1}%
@@ -38,4 +38,3 @@
 \contentsline {section}{\numberline {2.3}Giới hạn sai số và cải thiện lặp}{47}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Số điều kiện (Condition Numbers).}{48}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Tinh chỉnh lặp (Iterative Refinement)}{52}{subsection.2.3.2}%
-\contentsline {chapter}{\numberline {3}Kết luận}{56}{chapter.3}%
