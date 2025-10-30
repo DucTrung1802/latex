@@ -1,0 +1,187 @@
+%! TeX root = main.tex
+\documentclass[fontsize=12pt,a4paper,oneside,DIV=calc, chapterprefix=true]{scrbook} % twoside for draft
+\KOMAoptions{open=any}
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{\rmfamily\bfseries\huge}
+% Giảm khoảng cách trên/dưới tiêu đề MỤC LỤC
+\renewcommand{\cftbeforetoctitleskip}{-0.5em}
+
+% Encoding and fonts (pdfLaTeX)
+\usepackage[T5]{fontenc}        % Vietnamese characters
+\usepackage[utf8]{inputenc}     % UTF-8 input
+\usepackage[vietnam]{babel}     % Vietnamese hyphenation & captions
+\usepackage{newtxtext,newtxmath}% Times-like font with math support (better than mathptmx)
+
+\usepackage{enumitem}           % Custom enumerate labels
+\renewcommand{\contentsname}{{\rmfamily\bfseries MỤC LỤC}}
+\addtokomafont{chapter}{\rmfamily\bfseries}
+\addtokomafont{section}{\rmfamily}
+\addtokomafont{subsection}{\rmfamily}
+\addtokomafont{subsubsection}{\rmfamily}
+\addtokomafont{paragraph}{\rmfamily}
+\addtokomafont{subparagraph}{\rmfamily}
+\addtokomafont{chapterentry}{\rmfamily\bfseries}
+
+
+\addtokomafont{chapter}{\rmfamily\bfseries}
+\addtokomafont{section}{\rmfamily\bfseries}
+\addtokomafont{subsection}{\rmfamily}
+\renewcommand{\contentsname}{\normalfont\bfseries MỤC LỤC}
+\renewcommand{\cftchapfont}{\rmfamily\bfseries}
+\renewcommand{\cftbeforetoctitleskip}{2em}
+\renewcommand{\cftsecfont}{\rmfamily}
+\renewcommand{\cftsubsecfont}{\rmfamily}
+\renewcommand{\cftsubsubsecfont}{\rmfamily}
+
+\usepackage{amsmath, amsfonts, amssymb, bm, tabularx}
+\numberwithin{equation}{section}  % equations numbered by section
+
+% Layout and formatting
+\usepackage[paperheight=29.7cm, paperwidth=21cm, left=3cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry} % A4 with margins
+% \usepackage[fontsize=13pt]{scrextend}  % Font size
+\usepackage{indentfirst}              % Indent first paragraph
+\setlength{\parindent}{1cm}           % Paragraph indent
+% \setlength{\parskip}{6pt}             % Space between paragraphs
+% \renewcommand{\baselinestretch}{1.2}  % Line spacing
+
+% Graphics and figures
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+% Hyper reference
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue]{hyperref}
+
+\usepackage{float}
+\usepackage{subcaption} % loads the caption package
+\usepackage{amssymb}
+%\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\inputencoding{latin1}
+\inputencoding{utf8}
+\usepackage{tabto}    
+\usepackage{wrapfig}
+\usepackage{lscape}
+%\usepackage{tipa}
+%\usepackage{amssymb}
+ 
+%\usepackage{subcaption}
+%\usepackage{booktabs}
+\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{amsfonts}
+%\usepackage{ipa}
+%\renewcommand{\rmdefault}{phv} % Arial
+%\renewcommand{\sfdefault}{phv} % Arial
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+% \usepackage{algorithm2e}
+\usepackage[unicode]{hyperref}
+% \usepackage{tabularx}
+\usepackage{cleveref}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{hyperref}
+
+% \usepackage{amsthm}
+% \usepackage{amsmath, amssymb, amsfonts, amsthm}
+% \usepackage{graphicx}
+% \usepackage{booktabs}
+% \usepackage{tabularx}
+% \usepackage{adjustbox}
+% \usepackage{float}
+% \usepackage{caption}
+% \usepackage{algorithm}
+% \usepackage{algorithmic}
+% \usepackage{algpseudocode}
+% \usepackage{algorithm2e}
+% \usepackage{hyperref}
+ 
+\theoremstyle{definition}
+\newtheorem{example}{Ví dụ}[section]
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Định lý}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Nhận xét}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Định nghĩa}[section]
+\newtheorem{corollary}{Hệ quả}[section]
+
+
+
+
+
+\begin{document}
+
+% Section formatting
+\setcounter{secnumdepth}{4}
+% \titleformat*{\section}{\fontsize{20pt}{24pt}\selectfont \bfseries}
+% \titlespacing*{\section}{0pt}{0pt}{10pt}
+
+
+
+% Custom cover page
+\input{cover_page}  
+
+\clearpage
+\thispagestyle{empty} % Ẩn header/footer nếu cần
+
+\vspace*{\fill} % Đẩy nội dung xuống giữa trang
+{\centering \LARGE \textbf{LỜI CẢM ƠN} \par}
+\vspace{2em}
+Bài tiểu luận cuối kỳ này được hoàn thành dưới sự hướng dẫn của thầy Nguyễn Trung Hiếu. Chúng em xin bày tỏ lòng biết ơn sâu sắc tới thầy vì sự định hướng đề tài trong quá trình học tập môn học này.
+
+Trong quá trình làm bài tiểu luận này, do kiến thức còn hạn chế nên chúng em không tránh khỏi những thiếu sót. Chúng em mong nhận được những ý kiến đóng góp của thầy và các bạn để có thể rút ra kinh nghiệm, hoàn thiện và phát triển đề tài hơn.
+
+Chúng em xin chân thành cảm ơn!
+\vspace{5cm}
+\vspace*{\fill} % Đẩy phần dưới lên để căn giữa
+
+
+\clearpage % ✅ tự động sang trang sau khi kết thúc Lời cảm ơn
+% \vspace{-2cm}
+\tableofcontents
+
+\fancyhead{}  % Clears all page headers and footers
+% \rhead{\thepage}  % Sets the right side header to show the page number
+% \lhead{}  % Clears the left side page header
+%\fancyfoot[positions]{footer}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\pagestyle{fancy}  
+
+% Chapter 0
+\input{./main_content/chapter_0}
+
+
+% Chapter 1
+\input{./main_content/chapter_1}
+
+% Chapter 2
+\input{./main_content/chapter_2}
+
+% Chapter 9
+\input{./main_content/conclusion}
+
+% Appendix A
+\input{./appendix/appendix_a}
+
+
+\nocite{*}
+\bibliographystyle{IEEEtranS}
+\bibliography{ref}
+
+\end{document}

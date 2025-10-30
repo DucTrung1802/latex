@@ -1,0 +1,11 @@
+% ***************************************************
+% Abstract
+% ***************************************************
+
+\begin{center}
+    {\fontsize{14pt}{10pt}\selectfont \bfseries Abstract}
+\end{center}
+\vspace{-1em} % reduce space after the title
+
+Lớp Mixture-of-Experts (MoE) – một mô hình được kích hoạt thưa thớt và được điều khiển bởi bộ định tuyến – đã đạt được những thành công lớn trong học sâu. Tuy nhiên, việc hiểu rõ kiến trúc này vẫn còn hạn chế. Trong bài báo này, chúng tôi nghiên cứu một cách chính thức về cách mà lớp MoE cải thiện hiệu quả học của mạng nơ-ron và lý do vì sao mô hình hỗn hợp này không bị suy giảm thành một mô hình đơn lẻ. Kết quả thực nghiệm của chúng tôi cho thấy cấu trúc phân cụm vốn có của bài toán và tính phi tuyến của các chuyên gia (experts) đóng vai trò then chốt đối với thành công của MoE. Để hiểu rõ hơn điều này, chúng tôi xem xét một bài toán phân loại có cấu trúc phân cụm nội tại – một bài toán khó có thể học được chỉ với một chuyên gia đơn lẻ. Tuy nhiên, với lớp MoE, khi chọn các chuyên gia là mạng nơ-ron tích chập phi tuyến hai tầng (two-layer nonlinear CNNs), chúng tôi chứng minh rằng bài toán này có thể được học thành công. Hơn nữa, lý thuyết của chúng tôi chỉ ra rằng bộ định tuyến có thể học được các đặc trưng của tâm cụm, từ đó giúp phân tách bài toán phức tạp ban đầu thành các bài toán phân loại tuyến tính đơn giản hơn mà từng chuyên gia có thể giải quyết. Theo hiểu biết của chúng tôi, đây là công trình đầu tiên cung cấp kết quả lý thuyết nhằm hiểu một cách chính thức cơ chế hoạt động của lớp MoE trong học sâu.
+
